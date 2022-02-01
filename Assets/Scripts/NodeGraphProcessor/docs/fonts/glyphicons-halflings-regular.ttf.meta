@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9bc7fefebd1336c498cce1b735b6c1dc
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - GLYPHICONS Halflings
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e17337b9b5055034d9ac753caf3cce32, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

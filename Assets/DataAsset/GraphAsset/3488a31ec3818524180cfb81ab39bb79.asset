@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d3cadfc68c6ac4684283332d4dc05d, type: 3}
+  m_Name: 3488a31ec3818524180cfb81ab39bb79
+  m_EditorClassIdentifier: 
+  serializedNodes: []
+  nodes:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  edges:
+  - GUID: 21649669-7e79-44a3-b0a6-571d045a043b
+    owner: {fileID: 11400000}
+    inputNodeGUID: 14e374a5-d5a0-4caa-af29-68e4351442fb
+    outputNodeGUID: 26b1404f-919d-4c0f-b731-ba908e9bfe82
+    inputFieldName: input
+    outputFieldName: output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: a3f6a6bc-5f84-4b8d-9226-2ae32eaaf4f7
+    owner: {fileID: 11400000}
+    inputNodeGUID: 7e74804e-1158-4a43-a8fa-350497907272
+    outputNodeGUID: 14e374a5-d5a0-4caa-af29-68e4351442fb
+    inputFieldName: input
+    outputFieldName: output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 9337a788-bf89-42e8-8139-935810a71c35
+    owner: {fileID: 11400000}
+    inputNodeGUID: 3a1ad60d-46b4-4a04-99e9-dffceaeeb5ba
+    outputNodeGUID: 7e74804e-1158-4a43-a8fa-350497907272
+    inputFieldName: input
+    outputFieldName: output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  groups: []
+  stackNodes: []
+  pinnedElements: []
+  exposedParameters: []
+  serializedParameterList: []
+  stickyNotes: []
+  nodeInspectorReference: {fileID: 0}
+  position: {x: 15.333333, y: -42, z: 0}
+  scale: {x: 0.8695652, y: 0.8695652, z: 1}
+  references:
+    version: 1
+    00000000:
+      type: {class: StartNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        nodeCustomName: 
+        GUID: 26b1404f-919d-4c0f-b731-ba908e9bfe82
+        computeOrder: 0
+        position:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 100
+          height: 100
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        output: 
+    00000001:
+      type: {class: GameDataNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        nodeCustomName: 
+        GUID: 14e374a5-d5a0-4caa-af29-68e4351442fb
+        computeOrder: 1
+        position:
+          serializedVersion: 2
+          x: 180
+          y: 0
+          width: 328
+          height: 148
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        input: 
+        output: 
+        _evtData:
+          id: 4
+    00000002:
+      type: {class: GameDataNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        nodeCustomName: 
+        GUID: 7e74804e-1158-4a43-a8fa-350497907272
+        computeOrder: 2
+        position:
+          serializedVersion: 2
+          x: 215.33334
+          y: 215
+          width: 328
+          height: 146.66666
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        input: 
+        output: 
+        _evtData:
+          id: 5
+    00000003:
+      type: {class: GameDataNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        nodeCustomName: 
+        GUID: 3a1ad60d-46b4-4a04-99e9-dffceaeeb5ba
+        computeOrder: 3
+        position:
+          serializedVersion: 2
+          x: 227.31668
+          y: 402.1167
+          width: 100
+          height: 100
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        input: 
+        output: 
+        _evtData:
+          id: 6
+    00000004:
+      type: {class: FlagEvent, ns: , asm: Assembly-CSharp}
+      data:
+        _flagName: 
+        _value: 1
+        _action: 0
+    00000005:
+      type: {class: TransitionEvent, ns: , asm: Assembly-CSharp}
+      data:
+        _type: 0
+        _fallthrough: 0
+        _transitionTime: 0
+    00000006:
+      type: {class: WaitEvent, ns: , asm: Assembly-CSharp}
+      data:
+        _waitTime: 0

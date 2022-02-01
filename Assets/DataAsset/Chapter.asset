@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9533773c388efb34b82eeea83f84bcbf, type: 3}
+  m_Name: Chapter
+  m_EditorClassIdentifier: 
+  serializedNodes: []
+  nodes:
+  - id: 0
+  - id: 1
+  edges:
+  - GUID: 54e6ea26-314d-471f-8578-d3f04f7423d6
+    owner: {fileID: 11400000}
+    inputNodeGUID: 2b8d35f3-7c8c-4c69-a2d6-9a52271af64f
+    outputNodeGUID: 26a3977f-3b49-470a-966c-9c304243239a
+    inputFieldName: input
+    outputFieldName: output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  groups: []
+  stackNodes: []
+  pinnedElements: []
+  exposedParameters: []
+  serializedParameterList: []
+  stickyNotes: []
+  nodeInspectorReference: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  scale: {x: 1, y: 1, z: 1}
+  references:
+    version: 1
+    00000000:
+      type: {class: GameEventNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        nodeCustomName: 
+        GUID: 26a3977f-3b49-470a-966c-9c304243239a
+        computeOrder: 0
+        position:
+          serializedVersion: 2
+          x: 71
+          y: 99.33334
+          width: 154
+          height: 108.666664
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        input: 
+        output: 
+        _graphJson: 
+        _evt: {fileID: 11400000, guid: 3488a31ec3818524180cfb81ab39bb79, type: 2}
+        _graphGUID: 
+        _graph: {fileID: 11400000, guid: 71e8e6c5c960af440951f09755dd0de5, type: 2}
+    00000001:
+      type: {class: GameEventNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        nodeCustomName: 
+        GUID: 2b8d35f3-7c8c-4c69-a2d6-9a52271af64f
+        computeOrder: 1
+        position:
+          serializedVersion: 2
+          x: 521.3333
+          y: 99.33333
+          width: 328
+          height: 161.33334
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        input: 
+        output: 
+        _graphJson: 
+        _evt: {fileID: 11400000, guid: 930314ca99058d844ad372043cbf63a2, type: 2}
+        _graphGUID: 
+        _graph: {fileID: 11400000, guid: 67ab0cc623bb0724598cc60e58c5ba19, type: 2}
