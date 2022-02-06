@@ -8,26 +8,14 @@ public class EventGraphWindow : BaseGraphWindow
 {
 	BaseGraph tmpGraph;
 	EventGraphToolbarView toolbarView;
-	
-	[MenuItem("Window/EventGraph")]
-	public static BaseGraphWindow OpenWithTmpGraph()
-	{
-		var graphWindow = CreateWindow<EventGraphWindow>();
-
-		// When the graph is opened from the window, we don't save the graph to disk
-		graphWindow.tmpGraph = ScriptableObject.CreateInstance<BaseGraph>();
-		graphWindow.tmpGraph.hideFlags = HideFlags.HideAndDontSave;
-		graphWindow.InitializeGraph(graphWindow.tmpGraph);
-
-		graphWindow.Show();
-
-		return graphWindow;
-	}
 
 	protected override void OnDestroy()
 	{
 		graphView?.Dispose();
-		DestroyImmediate(tmpGraph);
+	}
+
+	private void OnProjectChange()
+	{
 	}
 
 	protected override void InitializeWindow(BaseGraph graph)

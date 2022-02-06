@@ -8,22 +8,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Chapter Graph")]
 public class Chapter : BaseGraph
 {
-    /*
-    public List<EventData> EventNodeList;
-
-    public EventData GetEventData(string guid)
-    {
-        var node = EventNodeList.Where(n => n.NodeGUID == guid).ToList();
-        if(node.Count == 0)
-        {
-            var obj = ScriptableObject.CreateInstance<EventData>();
-            EventNodeList.Add(obj);
-            return obj;
-        }
-        return node[0];
-    }
-    */
-
 #if UNITY_EDITOR
     // ダブルクリックでウィンドウが開かれるように
     [OnOpenAsset(0)]

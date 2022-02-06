@@ -7,14 +7,14 @@ using UnityEngine;
 using UnityEditor;
 using System.Reflection;
 
-[NodeCustomEditor(typeof(GameDataNode))]
-public class GameDataNodeView : BaseNodeView
+[NodeCustomEditor(typeof(GameConditionNode))]
+public class GameConditionNodeView : BaseNodeView
 {
     [Serializable]
     class DataBinder : ScriptableObject
     {
         [SerializeReference]
-        public IEventData Data;
+        public IEventConditions Condition;
     }
 
     SerializedObject _target;
@@ -22,14 +22,16 @@ public class GameDataNodeView : BaseNodeView
 
     public override void Enable()
     {
+        titleContainer.style.backgroundColor = new StyleColor(new Color(64,64,64));
+
         //RegisterCallback<MouseDownEvent>(OnMouseDown);
-        var node = nodeTarget as GameDataNode;
-        if(_binder == null)
+        var node = nodeTarget as GameConditionNode;
+        if (_binder == null)
         {
             _binder = ScriptableObject.CreateInstance<DataBinder>();
         }
-        Type type = node.Data.GetType();
-        _binder.Data = node.Data;
+        Type type = node.Condition.GetType();
+        _binder.Condition = node.Condition;
         _target = new UnityEditor.SerializedObject(_binder);
         dataContainer.Bind(_target);
 
@@ -46,36 +48,20 @@ public class GameDataNodeView : BaseNodeView
         var fields = type.GetFields(bindingAttr);
         foreach (var f in fields)
         {
-            var dp = new PropertyField(_target.FindProperty("Data."+f.Name), f.Name.Replace("_",""));
-            //dp.userData = f.GetValue(node.Data);
+            var dp = new PropertyField(_target.FindProperty("Condition." + f.Name), f.Name.Replace("_", ""));
             dp.style.minWidth = 300;
-            //dp.style.marginTop = 0;
-            //dp.style.marginBottom = 10;
             dp.style.marginLeft = 10;
             dp.style.marginRight = 10;
             {
                 var field = f;
                 dp.RegisterValueChangeCallback(d =>
                 {
-                    node.SetData(_binder.Data);
+                    node.SetCondition(_binder.Condition);
+                    //node._evt.SetData(dataProp.userData as List<IEventData>);
                 });
             }
             dataContainer.Add(dp);
         }
-
-        /*
-         //これでもいけるが、Dataの表示部分を消したかった
-        var dataProp = new PropertyField(_target.FindProperty("Data"));
-        dataProp.style.minWidth = 300;
-        dataProp.style.marginTop = 0;
-        dataProp.style.marginBottom = 10;
-        dataProp.style.marginLeft = 10;
-        dataProp.style.marginRight = 10;
-        dataProp.RegisterValueChangeCallback(d => {
-            node.SetData(_binder.Data);
-        });
-        contentContainer.Add(dataProp);
-        */
     }
 
     void OnMouseDown(MouseDownEvent evt)

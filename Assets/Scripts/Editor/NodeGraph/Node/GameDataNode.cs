@@ -30,6 +30,6 @@ public class GameDataNode : BaseNode
     // 計算処理
     protected override void Process()
     {
-        output = input;
+        //tbd
     }
 }

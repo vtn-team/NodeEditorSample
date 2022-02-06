@@ -61,8 +61,17 @@ public class EventData : BaseGraph
                 newNode.SetData(d);
                 AddNode(newNode);
 
-                Connect(newNode.inputPorts[0], parentNode.outputPorts[0]);
-                
+                if (newNode.inputPorts.Count > 0 && parentNode.outputPorts.Count > 0)
+                {
+                    Connect(newNode.inputPorts[0], parentNode.outputPorts[0]);
+                }
+                else
+                {
+                    Debug.LogWarning("cant connect");
+                    RemoveNode(newNode);
+                    break;
+                }
+
                 node = newNode;
                 parentNode = node;
             }

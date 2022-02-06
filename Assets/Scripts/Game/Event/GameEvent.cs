@@ -66,6 +66,10 @@ public class GameEvent : ScriptableObject
 #if UNITY_EDITOR
     public string EventName => _id;
     public List<IEventData> Data => _data;
+    public void SetCondition(List<IEventConditions> conds)
+    {
+        _condition = conds;
+    }
     public void SetData(List<IEventData> data)
     {
         _data = data;

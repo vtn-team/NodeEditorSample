@@ -16,6 +16,6 @@ public class StartNode : BaseNode
     // 計算処理
     protected override void Process()
     {
-        output = "ok";
+        //tbd
     }
 }

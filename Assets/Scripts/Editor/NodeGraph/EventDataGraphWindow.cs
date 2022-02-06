@@ -19,9 +19,9 @@ public class EventDataGraphWindow : BaseGraphWindow
 
 	protected override void OnDestroy()
 	{
-		_callback?.Invoke(GameEventNodeView.EventNodeEventType.WindowDestroy, null);
 		var ev = graph as EventData;
 		ev.Save();
+		_callback?.Invoke(GameEventNodeView.EventNodeEventType.WindowDestroy, null);
 		graphView?.Dispose();
 	}
 

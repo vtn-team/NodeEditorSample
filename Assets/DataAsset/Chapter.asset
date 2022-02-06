@@ -44,19 +44,17 @@ MonoBehaviour:
         computeOrder: 0
         position:
           serializedVersion: 2
-          x: 71
-          y: 99.33334
-          width: 154
-          height: 108.666664
-        expanded: 0
+          x: 103.333336
+          y: 99.33333
+          width: 208
+          height: 126.666664
+        expanded: 1
         debug: 0
         nodeLock: 0
         input: 
         output: 
-        _graphJson: 
         _evt: {fileID: 11400000, guid: 3488a31ec3818524180cfb81ab39bb79, type: 2}
         _graphGUID: 
-        _graph: {fileID: 11400000, guid: 71e8e6c5c960af440951f09755dd0de5, type: 2}
     00000001:
       type: {class: GameEventNode, ns: , asm: Assembly-CSharp-Editor}
       data:
@@ -65,16 +63,14 @@ MonoBehaviour:
         computeOrder: 1
         position:
           serializedVersion: 2
-          x: 521.3333
+          x: 440.66666
           y: 99.33333
-          width: 328
-          height: 161.33334
+          width: 207.33331
+          height: 158.66669
         expanded: 0
         debug: 0
         nodeLock: 0
         input: 
         output: 
-        _graphJson: 
         _evt: {fileID: 11400000, guid: 930314ca99058d844ad372043cbf63a2, type: 2}
         _graphGUID: 
-        _graph: {fileID: 11400000, guid: 67ab0cc623bb0724598cc60e58c5ba19, type: 2}
